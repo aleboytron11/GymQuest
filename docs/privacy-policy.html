@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GymQuest Privacy Policy</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem 4rem;
+    line-height: 1.6;
+    color: #1a1a1a;
+    background: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e6e6e6; background: #14121c; }
+    a { color: #b39dff; }
+    .updated { color: #9a92ad; }
+    hr { border-color: #33303f; }
+  }
+  h1 { font-size: 1.75rem; margin-bottom: 0.25rem; }
+  h2 { font-size: 1.2rem; margin-top: 2rem; }
+  .updated { color: #666; font-size: 0.9rem; margin-top: 0; }
+  table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+  th, td { text-align: left; padding: 0.5rem 0.75rem; border-bottom: 1px solid #ddd; vertical-align: top; }
+  th { font-weight: 600; }
+  code { background: rgba(127,127,127,0.15); padding: 0.1rem 0.35rem; border-radius: 4px; font-size: 0.9em; }
+  hr { margin: 2.5rem 0; border: none; border-top: 1px solid #ddd; }
+</style>
+</head>
+<body>
+
+<h1>GymQuest Privacy Policy</h1>
+<p class="updated">Last updated: August 31, 2026</p>
+
+<p>GymQuest ("the app") is a personal fitness-tracking app. This page explains what
+data the app accesses, what it collects, and what it does with it. We built GymQuest
+to work fully offline by default — nothing about your workouts is sent anywhere
+unless you explicitly turn on an optional feature.</p>
+
+<h2>Summary</h2>
+<table>
+  <tr><th>Data</th><th>Leaves your device?</th><th>Where it's stored</th></tr>
+  <tr><td>Workout logs (exercise, category, reps, timestamp)</td><td>No</td><td>Local database on your device only</td></tr>
+  <tr><td>Name, email, profile photo link</td><td>Only if you sign in to Community</td><td>Firebase Authentication (Google)</td></tr>
+  <tr><td>Community posts, comments, routine notes, music links</td><td>Only if you post them</td><td>Cloud Firestore (Google)</td></tr>
+  <tr><td>Health Connect exercise sessions</td><td>No &mdash; read on-device only, never uploaded</td><td>Not stored by GymQuest</td></tr>
+</table>
+
+<h2>Core workout tracking (no account required)</h2>
+<p>Logging workouts, tracking XP and character progression, browsing the exercise
+library, and viewing your workout history all work without creating an account
+and without any internet connection. This data is stored in a local database on
+your device and is never transmitted to us or anyone else. Uninstalling the app
+deletes this data.</p>
+
+<h2>Health Connect (optional)</h2>
+<p>If you choose to connect Android Health Connect, GymQuest requests read-only
+access to your exercise session data so it can check whether a workout you logged
+matches real activity data from your other fitness apps or wearables, and mark it
+with a "Verified" badge. This check happens entirely on your device. GymQuest never
+uploads, stores off-device, or shares any Health Connect data — it is read, compared,
+and discarded in the same session. You can revoke this access at any time in Android
+Settings &rarr; Health Connect &rarr; App permissions.</p>
+
+<h2>Community (optional, requires Google sign-in)</h2>
+<p>If you choose to sign in with Google to use the Community tab, GymQuest collects:</p>
+<ul>
+  <li><strong>Name, email address, and profile photo link</strong> from your Google
+  account, used to identify you within the app and via Firebase Authentication.</li>
+  <li><strong>Content you choose to post</strong> — text posts, comments, routine
+  notes, and music links — stored in Cloud Firestore and visible to other GymQuest
+  users, since sharing that content with the community is the entire purpose of the
+  feature.</li>
+</ul>
+<p>This data is processed and stored by Firebase (a Google service acting on our
+behalf), transmitted over encrypted connections (HTTPS/TLS). We do not sell this
+data or share it with any other third party. If you never open the Community tab
+or never sign in, none of this applies to you.</p>
+
+<h2>What we don't collect</h2>
+<p>GymQuest has no advertising SDK and no analytics or crash-reporting SDK. We do
+not collect your location, financial information, private messages, photos/videos
+(the profile photo is stored as a link to your existing Google account photo, not
+an uploaded image), web browsing activity, or device identifiers beyond what's
+needed for Firebase Authentication to function.</p>
+
+<h2>Data deletion</h2>
+<p>To request deletion of your Community account data (name, email, posts, and
+comments associated with your account), email us at
+<a href="mailto:aleboytron11@gmail.com">aleboytron11@gmail.com</a> from the address
+associated with your account, and we will delete it within a reasonable time.
+Deleting the app from your device immediately removes all locally stored workout
+data, which we never had a copy of in the first place.</p>
+
+<h2>Children's privacy</h2>
+<p>GymQuest is not directed at children under 13, and we do not knowingly collect
+personal information from children under 13.</p>
+
+<h2>Changes to this policy</h2>
+<p>If this policy changes, we'll update the "Last updated" date at the top of this
+page. Continued use of the app after a change constitutes acceptance of the updated
+policy.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy or your data? Email
+<a href="mailto:aleboytron11@gmail.com">aleboytron11@gmail.com</a>.</p>
+
+<hr>
+<p class="updated">GymQuest is developed by an independent developer, not a
+company. This policy applies to the GymQuest Android app only.</p>
+
+</body>
+</html>
