@@ -1,283 +1,340 @@
-# GymQuest
+# 🎮 GymQuest
+## *Transform Your Fitness into an Epic RPG Adventure*
 
-**A gamified fitness tracking app for Android that turns your workouts into an RPG adventure. Log exercises, earn XP, level up your character, and build an unstoppable fitness habit.**
+<div align="center">
 
----
+### 💪 Level Up Through Dedication • 🎯 Earn XP for Every Rep • 🧙‍♂️ Build Your Character
 
-## Overview
+**A gamified fitness tracking app that makes working out feel like an actual adventure quest.**
 
-GymQuest reimagines fitness tracking by combining workout logging with RPG game mechanics. Every exercise you log earns XP that contributes to your character's level progression. The app works entirely offline—your workout data stays on your device by default. Optional features like Health Connect integration and Community sharing are available if you want them, but they're never required.
-
-**Key Innovation:** While fitness apps typically use gamification as a gimmick, GymQuest makes the game mechanics inseparable from the tracking system. Your character level directly reflects your training consistency, making progress feel real and rewarding.
-
----
-
-## Features
-
-### Core Fitness Tracking (Offline, Always)
-- ✅ **Log Workouts** - Record exercise name, category, reps, sets, and weight
-- ✅ **XP System** - Earn 5 XP per rep × sets (e.g., 3 sets × 10 reps = 150 XP)
-- ✅ **Character Progression** - Your character automatically levels up as you accumulate XP (1 level per 1,000 XP)
-- ✅ **Workout History** - Browse all your logged workouts with timestamps
-- ✅ **Category Browsing** - Filter workouts by muscle group (Chest, Back, Legs, Arms, Shoulders, Cardio, Core)
-- ✅ **Local Database** - All data stored securely on your device using Room database
-
-### Coming Soon
-- 🎮 **Character Customization** - Design your character's appearance and gear
-- 🏆 **Achievement System** - Unlock badges for fitness milestones
-- 🤝 **Community Tab** - Share routines, find workout partners, and discuss fitness
-- 💪 **Health Connect Integration** - Verify workouts against wearable data for a "Verified" badge
-- 📊 **Advanced Analytics** - Track trends, PR records, and workout streaks
-- 🎵 **Music Integration** - Link Spotify playlists to your workout routines
+[✨ Features](#-features) • [🛠️ Tech Stack](#-tech-stack) • [🚀 Getting Started](#-getting-started) • [📈 Roadmap](#-phase-roadmap)
 
 ---
 
-## Screenshots
+</div>
 
-*[To be added once app is fully functional]*
+## 🎯 What is GymQuest?
 
----
+GymQuest turns your gym sessions into an **RPG progression system**. Every workout you log isn't just recorded—it's an **XP gain** that levels up your character. Forget boring fitness apps. This is where fitness meets gaming.
 
-## Technologies Used
+### The Problem It Solves
+Traditional fitness apps rely on boring dashboards and numbers. Users get discouraged because progress feels invisible. **GymQuest changes that**: every single rep you do matters, every set you complete earns rewards, and your character **visibly levels up** as you grow stronger.
 
-### Android & Kotlin
-- **Language:** Kotlin (100% - type-safe, null-safe, expressive)
-- **Android Minimum API:** 24 (Android 7.0)
-- **Target API:** 34 (Android 14)
-
-### Architecture & Patterns
-- **MVVM Architecture** - Clean separation of concerns with ViewModel handling state
-- **Repository Pattern** - Data layer abstraction for easy testing and maintenance
-- **StateFlow** - Reactive state management for UI updates
-
-### Database
-- **Room Database** - Local persistence with compile-time SQL verification
-- **SQLite** - Lightweight, efficient, no external dependencies
-- **Type Converters** - Custom converters for enum serialization
-
-### UI Framework
-- **Jetpack Compose** - Modern declarative UI toolkit
-- **Material Design 3** - Contemporary UI components and guidelines
-- **Custom Typography** - PressStart2P pixel art font for retro aesthetic
-
-### Libraries & Dependencies
-- **Kotlin Coroutines** - Async operations without callbacks
-- **Lifecycle Components** - ViewModels survive configuration changes
-- **Material3 Components** - Industry-standard UI patterns
-- **AndroidX** - Modern Android support libraries
+### The Solution
+**Gamification Done Right**: Unlike gimmicky fitness apps, GymQuest makes game mechanics *central* to tracking. Your character level = your actual training consistency. One system. One progression. Real motivation.
 
 ---
 
-## Architecture
+## ✨ Features
 
-### Project Structure
+### 🏋️ Core Fitness Tracking (Fully Offline)
+- ✅ **Log Workouts** — Record exercise name, category, reps, sets, weight
+- ✅ **XP System** — Earn `5 XP × reps × sets` per workout  
+  - Example: 10 reps × 3 sets = **150 XP earned**
+- ✅ **Character Levels** — Auto-level every 1,000 XP  
+  - Track your journey from Level 1 → Level 100+
+- ✅ **Workout History** — Browse all past workouts with timestamps
+- ✅ **Category Filtering** — Filter by: Chest 💪 | Back 🔙 | Legs 🦵 | Arms 💪 | Shoulders ⬆️ | Cardio 🏃 | Core 🎯
+- ✅ **Local Database** — 100% offline. Your data never leaves your device.
+
+### 🎮 Gamification Features
+- ✅ **Character Avatar** — Visual representation of your fitness journey
+- ✅ **XP Progress Bar** — See progress toward next level in real-time
+- ✅ **Milestone Achievements** — Unlock achievements at levels 5, 10, 20...
+- ✅ **Retro Pixel Aesthetic** — PressStart2P font + neon colors (dark mode optimized)
+
+### 🔜 Coming in Phase 2+
+- 🎨 **Character Customization** — Design your warrior (skins, armor, weapons)
+- 🏆 **Achievement Badges** — Unlock: "100 Push-ups Club", "PR Master", "Week Warrior"
+- 🤝 **Community Tab** — Share workouts, find gym partners, challenge friends
+- ⌚ **Health Connect Sync** — Verify workouts with wearables (Apple Watch, Fitbit, etc.)
+- 📊 **Advanced Analytics** — Charts, PRs, streaks, heatmaps
+- 🎵 **Spotify Integration** — Queue workout playlists while you train
+
+---
+
+## 🛠️ Tech Stack
+
+### Why These Choices?
+
+| Tech | Why | Benefit |
+|------|-----|---------|
+| **Kotlin** | Type-safe, null-safe, expressive | 0 NullPointerExceptions |
+| **Jetpack Compose** | Modern declarative UI | Reactive, easy to test |
+| **MVVM + StateFlow** | Industry standard | Maintainable, testable code |
+| **Room Database** | Compile-time SQL verification | Fewer runtime bugs |
+| **Coroutines** | Structured concurrency | Non-blocking database ops |
+
+### Full Stack
 ```
-app/src/main/java/
-├── com/example/gymquest/          # Main app package
-│   ├── WorkoutViewModel.kt        # MVVM state management
-│   ├── CharacterScreen.kt         # Character progression UI
-│   ├── LogWorkoutScreen.kt        # Workout logging form
-│   ├── BrowseWorkoutsScreen.kt    # Workout history & filtering
-│   ├── ExerciseLibrary.kt         # Exercise reference
-│   └── ui/theme/                  # UI customization
-│       └── PixelFont.kt           # Retro pixel art typography
-└── data/                          # Database layer
-    ├── Workout.kt                 # Room entity model
-    ├── WorkoutCategory.kt         # Exercise category enum
-    ├── WorkoutDao.kt              # Database access object
-    ├── WorkoutDatabase.kt         # Room database instance
-    └── Converters.kt              # Type converters
+UI Layer
+  ↓ (Jetpack Compose + Material Design 3)
+ViewModel + State Management
+  ↓ (StateFlow + MVVM)
+Business Logic
+  ↓ (WorkoutViewModel)
+Data Layer
+  ↓ (Repository + DAO pattern)
+Room Database + SQLite
+  ↓
+Local Device Storage (Encrypted by default)
 ```
 
-### Data Flow
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
 ```
-UI Layer (Compose)
-       ↓ (observes StateFlow)
-ViewModel (WorkoutViewModel)
-       ↓ (calls suspend functions)
-Repository/DAO (WorkoutDao)
-       ↓ (queries)
-Room Database (SQLite)
-       ↓
-Local Device Storage
+✓ Android Studio Flamingo (2022.2.1+)
+✓ Android SDK 34
+✓ Kotlin 1.9+
+✓ Gradle 8.0+
+✓ 5 minutes of free time
+```
+
+### 1️⃣ Clone & Setup
+```bash
+git clone https://github.com/aleboytron11/GymQuest.git
+cd GymQuest
+```
+
+### 2️⃣ Open in Android Studio
+```
+File → Open → Select GymQuest folder
+Wait for Gradle sync ☕ (2-3 min)
+```
+
+### 3️⃣ Build & Run
+```bash
+# Option A: Click Run in Android Studio (Shift+F10)
+# Option B: Use terminal
+./gradlew installDebug
+
+# Or build for emulator
+./gradlew assembleDebug
+```
+
+### 4️⃣ First Workout
+1. Tap **"Log"** tab at bottom
+2. Enter exercise: `"Bench Press"`
+3. Pick category: `💪 Chest`
+4. Enter reps: `10` | sets: `3`
+5. Optional: weight `225 lbs`
+6. **Tap "Log Workout"** → See your XP go **+150** ✨
+7. Tap **"Character"** tab → Watch your level progress
+
+---
+
+## 📊 Project Structure
+
+```
+GymQuest/
+├── app/src/main/java/
+│   ├── com/example/gymquest/
+│   │   ├── MainActivity.kt                    # App entry point, navigation
+│   │   ├── WorkoutViewModel.kt                # State management (MVVM)
+│   │   ├── LogWorkoutScreenEnhanced.kt        # Form with validation
+│   │   ├── BrowseWorkoutsScreenEnhanced.kt    # History + filtering
+│   │   ├── CharacterScreenEnhanced.kt         # Level display + stats
+│   │   ├── ExerciseLibraryEnhanced.kt         # Exercise reference
+│   │   └── ui/theme/
+│   │       ├── Theme.kt                       # Dark theme, colors
+│   │       └── PixelFont.kt                   # Retro typography
+│   └── data/
+│       ├── Workout.kt                         # Room entity (@Entity)
+│       ├── WorkoutCategory.kt                 # Enum for categories
+│       ├── WorkoutDao.kt                      # Database queries (@Dao)
+│       ├── WorkoutDatabase.kt                 # Room database (@Database)
+│       └── Converters.kt                      # Type converters
+├── build.gradle.kts                           # Dependencies, build config
+├── settings.gradle.kts                        # Project structure
+└── README.md                                  # You are here 📍
+```
+
+---
+
+## 🏗️ Architecture Highlights
+
+### MVVM Pattern
+```
+User taps "Log Workout"
+        ↓
+UI calls viewModel.addWorkout()
+        ↓
+ViewModel launches coroutine
+        ↓
+DAO inserts to Room database
+        ↓
+Database emits updated Flow
+        ↓
+ViewModel updates StateFlow
+        ↓
+Compose observes StateFlow
+        ↓
+UI re-renders with new data ✨
 ```
 
 ### Key Design Decisions
 
-**1. MVVM with StateFlow**
-- UI observes `WorkoutUiState` via `StateFlow`
-- ViewModel handles business logic and data operations
-- Coroutines manage async database operations safely
-- State is preserved across configuration changes (screen rotation, etc.)
+#### 1. Local-First Architecture
+- **Why**: Privacy, speed, offline-first experience
+- **How**: Room database, no authentication needed
+- **Benefit**: Instant feedback, no network delays
 
-**2. Local-First Architecture**
-- All workout data stored locally by default
-- No required cloud services or account creation
-- Optional Firebase integration for Community features (planned)
-- Privacy-by-design approach
+#### 2. StateFlow for State Management
+- **Why**: Reactive, composable, type-safe
+- **How**: ViewModel emits `WorkoutUiState` through StateFlow
+- **Benefit**: UI always in sync with data
 
-**3. Room Database**
-- Type-safe database queries (compiled at build time)
-- Automatic migrations support (future versions)
-- Efficient queries with Flow for reactive updates
-- No manual SQL strings = fewer runtime errors
+#### 3. Enum for Categories (Not Strings!)
+```kotlin
+// ❌ Bad: error-prone strings
+val category = "chest" // Typo possible, not type-safe
 
-**4. Enum for Categories**
-- Type-safe category selection (not error-prone strings)
-- Custom display names and emojis for UI
-- Easy to extend with new categories
-- Serializable for database storage
+// ✅ Good: compile-time safety
+val category = WorkoutCategory.CHEST
+```
 
----
-
-## Getting Started
-
-### Prerequisites
-- Android Studio Flamingo (2022.2.1) or newer
-- Android SDK 34
-- Kotlin 1.9+
-- Gradle 8.0+
-
-### Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/aleboytron11/GymQuest.git
-   cd GymQuest
-   ```
-
-2. **Open in Android Studio**
-   - File → Open → Select GymQuest folder
-   - Wait for Gradle sync to complete
-
-3. **Build and Run**
-   ```bash
-   # Via Android Studio: Click "Run" (Shift+F10)
-   # Via Gradle:
-   ./gradlew installDebug
-   ```
-
-4. **Emulator or Device**
-   - Ensure Android Emulator is running or physical device is connected
-   - App will launch automatically after build completes
-
-### First Steps
-1. Navigate to "Log Workout" tab
-2. Enter an exercise name (e.g., "Bench Press")
-3. Select category (e.g., "Chest")
-4. Enter reps and sets (e.g., 10 reps, 3 sets)
-5. Optionally enter weight
-6. Tap "Log Workout" to save
-7. Watch your XP increase and character level up!
+#### 4. Room Database with Type Converters
+- Enum fields automatically serialized
+- Compile-time SQL verification
+- No manual SQL strings = fewer bugs
 
 ---
 
-## What I Learned
+## 📈 Phase Roadmap
 
-### Android Development
-- **Jetpack Compose** - Building declarative UIs with functional programming paradigms
-- **Room Database** - Efficient local data persistence with compile-time verification
-- **ViewModel Architecture** - Proper state management that survives configuration changes
-- **Coroutines & Flow** - Asynchronous programming without callback hell
+### ✅ Phase 1: MVP (Current)
+- [x] Log workouts with full details
+- [x] Character level progression
+- [x] Workout history browsing
+- [x] Category filtering
+- [x] Offline-first local database
+- [x] Beautiful dark theme
+
+### 🎨 Phase 2: Gamification (Next)
+- [ ] Character customization screen
+- [ ] Achievement/badge unlock system
+- [ ] Daily/weekly streak tracking
+- [ ] Level-up animations & notifications
+- [ ] Leaderboard (local achievements)
+
+### 🤝 Phase 3: Social Features
+- [ ] Firebase Authentication
+- [ ] Share workout plans
+- [ ] Find gym buddies
+- [ ] Comment on shared workouts
+- [ ] Global leaderboards
+
+### ⌚ Phase 4: Health Integration
+- [ ] Health Connect API sync
+- [ ] Wearable verification
+- [ ] Cross-app workout import
+- [ ] "Verified" badge system
+
+### 📊 Phase 5: Advanced Analytics
+- [ ] XP/level charts
+- [ ] Personal records (PR) tracking
+- [ ] Body-part breakdown analysis
+- [ ] Workout streak heatmaps
+- [ ] 1RM calculators
+
+### 🎵 Phase 6: Polish
+- [ ] Spotify playlist integration
+- [ ] Dark/light theme toggle
+- [ ] Multi-language support
+- [ ] Play Store release
+- [ ] Companion web dashboard
+
+---
+
+## 🔒 Privacy & Security
+
+### Our Privacy Promise
+- ✅ **No account needed** — Use offline by default
+- ✅ **No data sharing** — Your workouts stay on your device
+- ✅ **No ads or trackers** — This is ad-free
+- ✅ **No cloud by default** — Optional sync (when we add cloud features)
+
+> 💡 Even with future cloud features, they'll be *opt-in only*. You control your data.
+
+---
+
+## 🎓 What I Learned Building This
+
+### Android/Kotlin
+- ✅ Jetpack Compose (declarative, reactive UI)
+- ✅ Room database (type-safe local persistence)
+- ✅ ViewModel architecture (proper state management)
+- ✅ Coroutines & Flow (async programming done right)
+- ✅ Material Design 3 (modern UI patterns)
 
 ### Software Architecture
-- **MVVM Pattern** - Separating UI logic from business logic for testability
-- **Repository Pattern** - Abstracting data sources for flexibility
-- **Reactive Programming** - Building responsive apps with Stream-based state management
-- **Type Safety in Kotlin** - Leveraging the type system to prevent runtime errors
+- ✅ MVVM pattern (separation of concerns)
+- ✅ Repository pattern (data abstraction)
+- ✅ Reactive programming (StateFlow streams)
+- ✅ Kotlin type system (prevent bugs at compile-time)
 
 ### Best Practices
-- **Null Safety** - Using Kotlin's null-safety features to eliminate NPEs
-- **Immutable Data** - Data classes for reliable state management
-- **Separation of Concerns** - Each layer has a single responsibility
-- **Offline-First Design** - Designing apps that work without internet
-
-### Project Management
-- **Git Workflow** - Committing changes with clear, descriptive messages
-- **Documentation** - Writing README and code comments for future developers
-- **Testing Strategy** - Planning testable code architecture (tests pending)
+- ✅ Null safety (0 NPE bugs possible)
+- ✅ Immutable data (reliable state)
+- ✅ Offline-first design (works without internet)
+- ✅ Testable architecture (easy to add tests)
 
 ---
 
-## Future Improvements
+## 📸 Screenshots
 
-### Phase 2: Gamification
-- [ ] Character customization (skin color, outfit, class)
-- [ ] Achievement/badge system (e.g., "100 Push-ups Club")
-- [ ] Daily/weekly streak tracking
-- [ ] Character progression milestones (unlock perks at levels 5, 10, 20)
-- [ ] XP multipliers for specific workout types
-
-### Phase 3: Community & Social
-- [ ] Firebase Authentication (Google sign-in)
-- [ ] Community tab for sharing routines
-- [ ] Follow other users and compare progress
-- [ ] Comments and reactions on shared routines
-- [ ] Leaderboards by category or total XP
-
-### Phase 4: Health Integration
-- [ ] Health Connect API integration
-- [ ] Read exercise sessions from wearables/other fitness apps
-- [ ] "Verified" badge for workouts matching wearable data
-- [ ] Import historical workout data
-
-### Phase 5: Advanced Analytics
-- [ ] Charts for XP over time
-- [ ] Personal records (PR) tracking by exercise
-- [ ] Workout frequency heatmap
-- [ ] Body part frequency analysis
-- [ ] Estimated 1RM calculations
-
-### Phase 6: Polish & Optimization
-- [ ] Unit tests (ViewModel, database queries)
-- [ ] UI tests (Compose test suite)
-- [ ] Performance profiling (RAM, battery usage)
-- [ ] Accessibility features (screen reader support, color contrast)
-- [ ] Play Store release with proper signing
+*Coming soon! Screenshots will show:*
+1. **Log Workout Screen** — Form with category selector, XP feedback
+2. **Character Screen** — Level display, XP bar, achievement badges
+3. **Workout History** — Scrollable list with delete option
+4. **Exercise Library** — Expandable reference by category
 
 ---
 
-## Privacy & Security
+## 🤝 Contributing
 
-All workout data is stored locally on your device and never leaves unless you explicitly enable optional features. See [Privacy Policy](docs/privacy-policy.html) for detailed information about:
-- What data is collected
-- Where it's stored
-- What happens with optional features (Health Connect, Community)
-- Data deletion options
+This started as a **personal portfolio project**, but ideas and feedback are welcome!
 
-**TL;DR:** Your fitness data is yours. We don't track you, sell your data, or require an account.
-
----
-
-## Contributing
-
-This is a personal portfolio project, but feedback and suggestions are welcome! If you find a bug or have ideas for features, open an issue on GitHub.
+Found a bug? Have a feature idea?
+- Open an issue on GitHub
+- Submit a pull request
+- Reach out: aleboytron11@gmail.com
 
 ---
 
-## License
+## 📝 License
 
-This project is open source and available under the MIT License. See LICENSE file for details.
+MIT License — Use this code for learning, projects, or as a template!
 
----
+```
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without not limited to the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software...
+```
 
-## Contact
-
-Questions? Reach out:
-- **Email:** aleboytron11@gmail.com
-- **GitHub:** [@aleboytron11](https://github.com/aleboytron11)
-
----
-
-## Acknowledgments
-
-- **Press Start 2P Font** - For the retro pixel-art aesthetic
-- **Material Design 3** - For modern, accessible UI guidelines
-- **Google Fonts** - For free, open-source typography
-- **Android Developers Community** - For excellent documentation and support
+See [LICENSE](LICENSE) for full text.
 
 ---
 
-**Built with ❤️ as a portfolio project to demonstrate Android development skills.**
+## 👋 Let's Connect
 
-*Last Updated: September 2026*
+Built by **Alejandro** with ❤️
+
+- 💼 **GitHub** [@aleboytron11](https://github.com/aleboytron11)
+- 📧 **Email** aleboytron11@gmail.com
+- 🐦 **Let's chat** about Android, Kotlin, or fitness!
+
+---
+
+<div align="center">
+
+### 🎮 *Now stop reading and start logging those workouts!* 🎮
+
+**Your character is waiting. Level up. 🚀**
+
+</div>
