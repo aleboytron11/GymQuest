@@ -7,7 +7,7 @@
 
 **A gamified fitness tracking app that makes working out feel like an actual adventure quest.**
 
-[✨ Features](#-features) • [🛠️ Tech Stack](#-tech-stack) • [🚀 Getting Started](#-getting-started) • [📈 Roadmap](#-phase-roadmap)
+[✨ Features](#-features) • [🛠️ Tech Stack](#-tech-stack) • [📸 Screenshots](#-screenshots) • [🚀 Getting Started](#-getting-started) • [📈 Roadmap](#-phase-roadmap)
 
 ---
 
@@ -42,6 +42,8 @@ Traditional fitness apps rely on boring dashboards and numbers. Users get discou
 - ✅ **XP Progress Bar** — See progress toward next level in real-time
 - ✅ **Milestone Achievements** — Unlock achievements at levels 5, 10, 20...
 - ✅ **Retro Pixel Aesthetic** — PressStart2P font + neon colors (dark mode optimized)
+- ✅ **Daily Quests** — Stay motivated with daily challenges
+- ✅ **Level Up Animations** — Celebration popups when you advance
 
 ### 🔜 Coming in Phase 2+
 - 🎨 **Character Customization** — Design your warrior (skins, armor, weapons)
@@ -50,6 +52,38 @@ Traditional fitness apps rely on boring dashboards and numbers. Users get discou
 - ⌚ **Health Connect Sync** — Verify workouts with wearables (Apple Watch, Fitbit, etc.)
 - 📊 **Advanced Analytics** — Charts, PRs, streaks, heatmaps
 - 🎵 **Spotify Integration** — Queue workout playlists while you train
+
+---
+
+## 📸 Screenshots
+
+### 🏠 Character Screen - Track Your Progress
+![Character Screen](https://via.placeholder.com/300x600?text=Character+Screen)
+- **Peasant Novice** to **Soldier Warrior** progression
+- Real-time XP progress bar
+- Category-specific stat tracking (Strength, Cardio, Flexibility)
+- Daily quests with completion tracking
+
+### 📝 Log Workout - Record Your Gains
+![Log Workout Screen](https://via.placeholder.com/300x600?text=Log+Workout)
+- Quick workout form with category selector
+- Real-time XP calculation (5 × reps × sets)
+- Support for weight tracking (optional)
+- Success feedback with XP earned display
+
+### 📊 Browse Workouts - View History
+![Browse Workouts](https://via.placeholder.com/300x600?text=Browse+Workouts)
+- Filter by muscle groups (Chest, Back, Legs, Arms, Core, Cardio)
+- View all logged workouts with timestamps
+- Delete individual workouts
+- See exercises with reps, sets, and weight
+
+### 🤝 Community - Connect with Others
+![Community Screen](https://via.placeholder.com/300x600?text=Community)
+- Join the GymQuest community (Phase 2+)
+- Share routines and connect with other players
+- Sign in with Google for authentication
+- Comment on workouts and share achievements
 
 ---
 
@@ -212,6 +246,7 @@ val category = WorkoutCategory.CHEST
 - [x] Category filtering
 - [x] Offline-first local database
 - [x] Beautiful dark theme
+- [x] Daily quests system
 
 ### 🎨 Phase 2: Gamification (Next)
 - [ ] Character customization screen
@@ -281,16 +316,6 @@ val category = WorkoutCategory.CHEST
 - ✅ Immutable data (reliable state)
 - ✅ Offline-first design (works without internet)
 - ✅ Testable architecture (easy to add tests)
-
----
-
-## 📸 Screenshots
-
-*Coming soon! Screenshots will show:*
-1. **Log Workout Screen** — Form with category selector, XP feedback
-2. **Character Screen** — Level display, XP bar, achievement badges
-3. **Workout History** — Scrollable list with delete option
-4. **Exercise Library** — Expandable reference by category
 
 ---
 
