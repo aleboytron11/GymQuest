@@ -116,6 +116,19 @@ Local Device Storage (Encrypted by default)
 
 ---
 
+## 📚 Certifications & Learning
+
+### 🎓 In Progress
+- **📱 Meta Android Developer Professional Certificate** (Coursera)
+  - Foundation of mobile development with Kotlin
+  - Advanced Android development patterns
+  - Building scalable Android applications
+  - Expected completion: *In progress* 🚀
+
+**Note:** GymQuest was built as a practical application of the concepts learned throughout this certification, demonstrating real-world implementation of MVVM architecture, Jetpack Compose, and modern Android development best practices.
+
+---
+
 ## 🚀 Getting Started
 
 ### Prerequisites
